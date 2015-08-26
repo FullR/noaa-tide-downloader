@@ -1,5 +1,5 @@
 {
-  "name": "noaa-request",
+  "name": "noaa-tide-downloader",
   "version": "0.0.1",
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha --compilers js:babel/register -t 10000 -R list"

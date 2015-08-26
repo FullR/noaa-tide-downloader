@@ -3,6 +3,7 @@ import downloadTideData from "../lib/downloadTideData";
 describe("downloadTideData", () => {
   it("should download a array of timestamps", (done) => {
     downloadTideData({
+      stationId: "9432780",
       startTime: Date.now(),
       endTime: Date.now() + (1000 * 60 * 60 * 24 * 7)
     })
