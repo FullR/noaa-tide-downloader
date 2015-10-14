@@ -12,9 +12,15 @@ describe("downloadTideData", () => {
         done(new Error("Data is not an array"));
       } else if(!data.length) {
         done(new Error("No results in data"));
+      } else if(data.some(isInvalidTimestamp)) {
+        done(new Error("Data contains invalid timestamps"));
       } else {
         done();
       }
     }, done);
+
+    function isInvalidTimestamp(n) {
+      return typeof n !== "number" || n <= 0;
+    }
   });
 });
